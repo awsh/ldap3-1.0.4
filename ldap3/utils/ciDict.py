@@ -28,7 +28,7 @@ import collections
 from .. import SEQUENCE_TYPES
 
 
-class CaseInsensitiveDict(collections.MutableMapping):
+class CaseInsensitiveDict(collections.abc.MutableMapping):
     def __init__(self, other=None, **kwargs):
         self._store = dict()  # store use the original key
         self._case_insensitive_keymap = dict()  # is a mapping ci_key -> key
